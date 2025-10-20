@@ -1,0 +1,15 @@
+{
+  "localhost": {
+    "chainId": 31337,
+    "entryPoint": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "smartAccountFactory": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "testSmartAccount": "0x70511574c08E25Be4a445bf300DAb69aFDcf3F82",
+    "mockERC20": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
+  },
+  "sepolia": {
+    "chainId": 11155111,
+    "entryPoint": "0x7A93344826CA3E410F8838E05C378d77f25aC0Ab",
+    "smartAccountFactory": "0x1d76001Bc2323Cccd4FdC8B1231e907F645AB765",
+    "testSmartAccount": "0x49cca6d32e303975ab9748882248f9c3De448669"
+  }
+}
