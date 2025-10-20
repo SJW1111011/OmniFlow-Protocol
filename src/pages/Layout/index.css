@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+.layout-container {
+  min-height: 100vh;
+  background: transparent;
+  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0;
+  height: 100px;
+  line-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-hidden {
+  pointer-events: none;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 100%;
+  gap: 40px;
+}
+
+.logo-section {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.logo-title {
+  margin: 0 !important;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-menu {
+  flex: 1;
+  background: transparent;
+  border: none;
+  line-height: 78px;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-menu .ant-menu-item {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 16px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(0, 0, 0, 0.85);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-menu .ant-menu-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2)); */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.nav-menu .ant-menu-item:hover {
+  transform: translateY(-1px);
+}
+
+.nav-menu .ant-menu-item:hover::before {
+  opacity: 1;
+}
+
+.nav-menu .ant-menu-item-selected {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.55) !important;
+  box-shadow: none;
+  border: none;
+}
+
+.nav-menu .ant-menu-item-selected::after {
+  display: none !important;
+}
+
+.nav-menu .ant-menu-item::after {
+  display: none !important;
+}
+
+.nav-menu .ant-menu-item-active::after {
+  display: none !important;
+}
+
+.nav-menu .ant-menu-horizontal > .ant-menu-item-selected::after,
+.nav-menu .ant-menu-horizontal > .ant-menu-item::after {
+  display: none !important;
+  border-bottom: none !important;
+}
+
+.wallet-section {
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  background: transparent;
+  padding: 0;
+  margin-top: 100px; /* 为固定导航栏留出空间 */
+}
+
+.content-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  min-height: calc(100vh - 160px);
+}
+
+.footer {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social-icon {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+
+  .nav-menu {
+    margin: 16px 0;
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .content-wrapper {
+    padding: 20px 40px;
+  }
+}
